@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+ <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+  <!-- SPELLS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+  </head>
+  <body ng-app="coursExoApp">
+ 
+ <div class="container">
+      <div class="header">
+        <ul class="nav nav-tabs" ng-controller="HeaderController">
+         <li role="presentation" ng-controller='TagController' class="active"><a href="#"><i class="fa fa-home"></i> {{ message }} </a></li>
+	  <li  ng-click='toggleMenu()'><a ng-href="#Projects">Projects</a></li>
+          <li  ng-click='toggleMenu()'><a ng-href="#Profiles">Profiles</a></li>
+	  <li ng-click='toggleMenu()'><a ng-href="#UsersStories">Users stories</a></li>
+             <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      New <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li ng-click='toggleMenu()'><a ng-href="#NewProject">Project</a></li>
+      <li ng-click='toggleMenu()'><a ng-href="#NewUserStory">User Story</a></li>
+    </ul>
+  </li>
+          </ul>
+      
+      </div>
+
+      <div ng-view=""></div>
+
+      <div class="footer">
+        <p><span class="glyphicon glyphicon-user"></span> </p>
+      </div>
+    </div>
+
+ 
+
+        <!--scripts  -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/controller.js"></script>	        
+	<script src="scripts/controllers/navbar.js"></script>
+        <script src="scripts/controllers/search.js"></script>
+	<script src="scripts/controllers/allProject.js"></script>
+        <script src="scripts/libs/ui-bootstrap-tpls.js"></script>
+	<!-- end -->
+</body>
+</html>

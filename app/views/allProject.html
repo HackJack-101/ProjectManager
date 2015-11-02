@@ -1,0 +1,12 @@
+<div class="movies-container" id="top">
+ <h1> All Movies </h1>
+   <ul class="movies">
+     
+       <div class="table table-bordered" ng-repeat="movie in movies"> 
+	 <tr>
+	 <th>  {{movie.title}} </th>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	 <th>  {{movie.genre}} </th>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	 <rating ng-model="movie.rating" max="10" readonly="true"></rating>
+	 </tr> 
+       </div>
+    </ul>
+</div>

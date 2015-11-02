@@ -1,0 +1,15 @@
+<p>
+  <form class="form-search">
+    <input type="search" ng-model="q" placeholder="title">
+    <button type="submit" class="btn">Search</button>
+  </form>
+  </br>
+  <ul class="movies">
+    <div class="table table-bordered" ng-repeat="movie in movies | filter:q ">
+      <th>  {{movie.title | filter:q}} </th>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	 
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	 
+      <rating ng-model="movie.rating" max="10" readonly="true"></rating>
+
+    </div>
+  </ul>
+</p>
