@@ -11,4 +11,4 @@ exports.projectSchema = new db.Schema({
   description: String,
 });
 
-exports.projectModel = db.model("Workshop", workshopSchema);
+exports.projectModel = db.model("Project", exports.projectSchema);
