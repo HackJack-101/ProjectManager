@@ -18,6 +18,7 @@ exports.userStorySchema = new db.Schema({
   title: String,
   description: String,
   state: String,
+  project: String,
   number: Number,
   priority: Number,
   difficulty: Number,
