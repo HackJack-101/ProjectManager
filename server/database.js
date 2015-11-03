@@ -9,6 +9,7 @@ db.connect('mongodb://localhost/projects', function(err) {
 exports.projectSchema = new db.Schema({
   title: String,
   description: String,
+  updated: { type: Date, default: Date.now }
 });
 
 exports.projectModel = db.model("Project", exports.projectSchema);
@@ -19,7 +20,8 @@ exports.userStorySchema = new db.Schema({
   state: String,
   number: Number,
   priority: Number,
-  difficulty: Number
+  difficulty: Number,
+  updated: { type: Date, default: Date.now }
 });
 
 exports.userStoryModel = db.model("UserStory", exports.userStorySchema);
@@ -32,7 +34,8 @@ exports.taskSchema = new db.Schema({
   dependancies: [Number],
   cost: Number,
   developper: String,
-  closed: Boolean
+  closed: Boolean,
+  updated: { type: Date, default: Date.now }
 });
 
 exports.taskModel = db.model("Task", exports.taskSchema);
