@@ -33,4 +33,15 @@ app.get('/projects', function(req, res) {
   });
 });
 
+app.get('/projects/:id', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  db.projectModel.findById(req.params.id, function(err, data) {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.send(JSON.stringify(data));
+    }
+  });
+});
+
 app.listen(8080);
