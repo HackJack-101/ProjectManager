@@ -12,3 +12,14 @@ exports.projectSchema = new db.Schema({
 });
 
 exports.projectModel = db.model("Project", exports.projectSchema);
+
+exports.userStorySchema = new db.Schema({
+  title: String,
+  description: String,
+  state: String,
+  number: Number,
+  priority: Number,
+  difficulty: Number
+});
+
+exports.userStoryModel = db.model("UserStory", exports.userStorySchema);
