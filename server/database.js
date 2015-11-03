@@ -31,6 +31,7 @@ exports.taskSchema = new db.Schema({
   title: String,
   description: String,
   state: String,
+  userStory: String,
   number: Number,
   dependancies: [Number],
   cost: Number,
