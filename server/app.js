@@ -44,4 +44,16 @@ app.get('/projects/:id', function(req, res) {
   });
 });
 
+app.post('/projects', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  var newProject = new db.projectModel(req.body);
+  newProject.save(function(err) {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.send(req.body);
+    }
+  });
+});
+
 app.listen(8080);
