@@ -23,3 +23,16 @@ exports.userStorySchema = new db.Schema({
 });
 
 exports.userStoryModel = db.model("UserStory", exports.userStorySchema);
+
+exports.taskSchema = new db.Schema({
+  title: String,
+  description: String,
+  state: String,
+  number: Number,
+  dependancies: [Number],
+  cost: Number,
+  developper: String,
+  closed: Boolean
+});
+
+exports.taskModel = db.model("Task", exports.taskSchema);
