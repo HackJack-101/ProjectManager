@@ -9,6 +9,7 @@
   "main": "server/app.js",
   "dependencies": {
     "express": "latest",
+    "connect": "latest",
     "body-parser": "latest",
     "mongoose": "latest"
   },
