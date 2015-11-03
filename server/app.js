@@ -56,4 +56,17 @@ app.post('/projects', function(req, res) {
   });
 });
 
+app.put('/projects/:id', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  db.projectModel.update({
+    _id: req.params.id
+  }, req.body, function(err) {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.send(JSON.stringify(req.body));
+    }
+  });
+});
+
 app.listen(8080);
