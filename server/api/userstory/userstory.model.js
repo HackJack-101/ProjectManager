@@ -7,6 +7,7 @@ var UserStorySchema = new mongoose.Schema({
 	description: String,
 	state: String,
 	project: String,
+	sprint: {type: String, default: null},
 	number: Number,
 	priority: Number,
 	difficulty: Number,
