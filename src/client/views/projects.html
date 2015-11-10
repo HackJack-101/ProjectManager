@@ -1,0 +1,22 @@
+<div>
+<h1>View of all projects</h1>
+</div>
+<div layout="column" layout-fill style="padding-bottom: 32px;">
+  <md-whiteframe class="md-whiteframe-z1">
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th>Titre</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="project in projects track by project._id">
+          <td>{{project.title}}</td>
+          <td>{{project.description}}</td>
+          <td>{{project.update}}</td>
+          
+        </tr>
+        <tbody>
+    </table>
+  </md-whiteframe>
+</div>

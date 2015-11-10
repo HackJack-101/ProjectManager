@@ -12,6 +12,7 @@ angular.module('coursExoApp')
         
         $scope.loadMovies = function(){
    	    $scope.message = "project Manager";
+	    title = "Project Manager";
         };
 
         $scope.pageChanged = function(){
@@ -19,3 +20,9 @@ angular.module('coursExoApp')
         };
         $scope.loadMovies();
   });
+
+function TagController($scope) { $scope.message = title;
+}
+
+function TagControllerProject($scope) { $scope.message = "All Project";
+}

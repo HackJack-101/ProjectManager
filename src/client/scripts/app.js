@@ -10,7 +10,7 @@
  */
 angular
   .module('coursExoApp', [
-    'ngRoute', 'ui.bootstrap'
+    'ngRoute', 'ui.bootstrap', 'projectManagerControllers'
   ]) 
  .config(function ($routeProvider) {
     $routeProvider
@@ -19,15 +19,15 @@ angular
         controller: 'AllProjectCtrl'
       }) 
        .when('/Projects', {
-        templateUrl: 'views/project.html',
+        templateUrl: 'views/projects.html',
         controller: 'AllProjectCtrl'
       })
       .when('/UsersStories', {
         templateUrl: 'views/user_story.html',
         controller: 'UserStoryCtrl'
       })
-      .when('/Profiles', {
-        templateUrl: 'views/profiles.html',
+      .when('/Tasks', {
+        templateUrl: 'views/tasks.html',
         controller: 'AllProjectCtrl'
       })
      .when('/NewUserStory', {
@@ -36,6 +36,10 @@ angular
       })
      .when('/NewProject', {
         templateUrl: 'views/new_project.html',
+        controller: 'newProjectCtrl'
+      })
+     .when('/NewTask', {
+        templateUrl: 'views/new_task.html',
         controller: 'newProjectCtrl'
       })
       	 .when('/search', {
@@ -47,4 +51,4 @@ angular
       });
   });
   
-var title = "Project Manager";
+var title;
