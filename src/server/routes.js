@@ -7,7 +7,7 @@ module.exports = function (app) {
 	app.use('/sprints', require('./api/sprint'));
 	app.use('/userstories', require('./api/userstory'));
 
-	app.route('/', function (req, res) {
+	app.get('/', function (req, res) {
 		res.setHeader('Content-Type', 'text/plain');
 		res.send("Hello World!");
 	});

@@ -4,7 +4,7 @@ var Project = require('./project.model');
 
 exports.get = function (req, res) {
 	res.setHeader('Content-Type', 'application/json');
-	Project.finProjectyId(req.params.id, function (err, data) {
+	Project.findById(req.params.id, function (err, data) {
 		if (err) {
 			res.status(500).send(err);
 		} else {
